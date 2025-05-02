@@ -162,7 +162,8 @@ p {
   width: fit-content;
 }
 
-#savjeti {
+#savjeti,
+#smjerovi {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -170,7 +171,8 @@ p {
   padding: 20px;
 }
 
-.savjet {
+.savjet,
+.smjer {
   background-color: #003366;
   padding: 20px;
   border-radius: 10px;
@@ -179,18 +181,24 @@ p {
   flex-grow: 1;
 }
 
-.savjet h2 {
+.savjet h2,
+.smjer h3 {
   text-align: center;
 }
 
-.savjet ul {
-  margin-top: 20px;
+.savjet ul,
+.smjer ul {
+  margin-top: 10px;
 }
 
-.savjet li {
+.savjet li,
+.smjer li {
   margin: 10px;
 }
 
+.smjer p {
+  margin-bottom: 10px;
+}
 #kontaktForma {
   max-width: 500px;
   margin: auto;
@@ -227,7 +235,7 @@ form button {
 
 /* Za mobitele */
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .grid-container {
     grid-template-areas:
       "header"
@@ -239,5 +247,15 @@ form button {
   .left,
   .right {
     display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .article {
+    flex-direction: column;
+  }
+  .article img {
+    width: 100%;
+    margin: auto;
   }
 }
