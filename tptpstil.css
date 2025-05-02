@@ -254,8 +254,31 @@ form button {
   .article {
     flex-direction: column;
   }
+
   .article img {
     width: 100%;
     margin: auto;
+  }
+
+  #savjeti,
+  #smjerovi {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .savjet,
+  .smjer {
+    width: 90%; /* gotovo cijela širina ekrana */
+    font-size: 1rem; /* poveća osnovni tekst, možeš i 1.1rem */
+  }
+
+  .savjet h2,
+  .smjer h3 {
+    font-size: 1.3rem;
+  }
+
+  .savjet li,
+  .smjer li {
+    font-size: 0.95rem;
   }
 }
