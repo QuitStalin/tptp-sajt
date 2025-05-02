@@ -137,6 +137,7 @@ p {
   background-color: #003366;
   margin: 10px;
   display: flex;
+  border-radius: 10px;
 }
 
 .article img {
@@ -167,8 +168,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px;
 }
 
 .savjet,
@@ -251,6 +252,20 @@ form button {
 }
 
 @media (max-width: 700px) {
+  .grid-container {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+    height: auto; /* <--- OVO je ključno */
+  }
+
+  .left,
+  .right {
+    display: none;
+  }
+
   .article {
     flex-direction: column;
   }
@@ -268,8 +283,8 @@ form button {
 
   .savjet,
   .smjer {
-    width: 90%; /* gotovo cijela širina ekrana */
-    font-size: 1rem; /* poveća osnovni tekst, možeš i 1.1rem */
+    width: 100%;
+    font-size: 1rem;
   }
 
   .savjet h2,
@@ -280,5 +295,9 @@ form button {
   .savjet li,
   .smjer li {
     font-size: 0.95rem;
+  }
+
+  main {
+    overflow-y: visible !important;
   }
 }
