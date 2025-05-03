@@ -17,7 +17,7 @@ body {
     "header  header   header"
     "left    main     right"
     "footer  footer   footer";
-  grid-template-columns: 200px 1fr 250px;
+  grid-template-columns: 200px 1fr 300px;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
 }
@@ -256,14 +256,23 @@ form button {
     grid-template-areas:
       "header"
       "main"
+      "left"
+      "right"
       "footer";
     grid-template-columns: 1fr;
-    height: auto; /* <--- OVO je ključno */
+    grid-template-rows: auto auto auto auto auto;
+    height: auto;
+    background-color: #002447;
   }
 
   .left,
   .right {
-    display: none;
+    display: block;
+  }
+
+  .left {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
   .article {
